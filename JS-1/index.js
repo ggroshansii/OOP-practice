@@ -34,6 +34,8 @@ function Circle(radius) {
 const another = new Circle(1);
 another.draw();
 
+Circle.call({}, 1); //equivalent to "const another = new Circle(1);"
+Circle.apply({}, [1, 2, 3]) //same as call() but can pass array now
 // new String();  <- string constructor; "", '', ``  <- string literals
 // new Boolean();  <- boolean constructor; true, false  <- boolean literals
 // new Number();  <- number constructor; 1, 2, 3 <- number literals
