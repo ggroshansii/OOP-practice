@@ -57,4 +57,19 @@ x.value = 20; // x = 20, and y = 20;
 
 
 
-//
+// Adding / Removing Properties
+
+function Circle(radius) {
+  this.radius = radius;
+  this.draw  = function(){
+      console.log("draw");
+  }
+}
+
+const circle = new Circle(10);
+
+circle.location = { x: 1 };    // dot notation
+circle["location"] = { x: 1 }; // bracket notation
+
+delete circle.location  //deletes property using dot notation
+delete circle["location"] //deletes property using bracket notation
